@@ -5,7 +5,6 @@ import LandingPage from './LandingPage';
 export default function Main() {
   return (
     <div>
-      <Navigation />
       <LandingPage />
     </div>
   );

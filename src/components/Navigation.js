@@ -35,6 +35,11 @@ const Navigation = (props) => {
                 <Link to="/about">About</Link>
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink>
+                <Link to="/login">Login</Link>
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>

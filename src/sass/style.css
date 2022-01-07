@@ -1,12 +1,80 @@
-.custom-nav {
-  max-width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shizuru&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body {
+  font-family: 'Ubuntu', sans-serif;
 }
 
-.custom-nav img {
-  max-width: 100%;
+.custom-nav {
+  background: -webkit-gradient(linear, left top, left bottom, from(#36d1dc), to(#5b86e5));
+  background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+}
+
+.custom-nav .navbar-nav .nav-link {
+  color: #04009a;
+}
+
+.custom-nav .navbar-nav .nav-link a {
+  color: #04009a;
+  text-decoration: none;
+}
+
+.custom-nav .navbar-nav .nav-link a:hover {
+  color: #0f07f8;
 }
 
 .custom-nav .nav-logo {
-  max-width: 10rem;
+  width: 8rem;
+}
+
+.landing-row {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#b2fefa), to(#0ed2f7));
+  background: linear-gradient(to right, #b2fefa, #0ed2f7);
+}
+
+.landing-row h1 {
+  font-family: 'Shizuru', cursive, sans-serif;
+}
+
+.landing-row .img-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.landing-row .img-col img {
+  max-width: 100%;
+}
+
+.landing-row .form-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #04009a;
+}
+
+.landing-row .form-col h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.landing-row .form-col Button {
+  background-color: #77acf1;
+}
+
+.landing-row .form-col Button:hover {
+  background-color: #4f709c;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
+import { Link, useNavigate } from 'react-router-dom';
 
-// https://youtu.be/PKwu15ldZ7k?t=1459
+// https://youtu.be/PKwu15ldZ7k?t=2147
 
 export default function Signup() {
   const emailRef = useRef();
@@ -11,6 +12,7 @@ export default function Signup() {
   const { signup } = useAuth();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -23,6 +25,7 @@ export default function Signup() {
       setError('');
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
+      navigate('/');
     } catch {
       setError('failed to create an account');
     }
@@ -34,21 +37,32 @@ export default function Signup() {
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
-          {currentUser}
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+            <Form.Group id="email" placeholder="email">
+              <Form.Control
+                type="email"
+                placeholder="email"
+                ref={emailRef}
+                required
+              />
             </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+            <Form.Group id="password" className="mt-2">
+              <Form.Control
+                type="password"
+                placeholder="password"
+                ref={passwordRef}
+                required
+              />
             </Form.Group>
 
-            <Form.Group id="password-confirm">
-              <Form.Label>password confirmation</Form.Label>
-              <Form.Control type="password" ref={passwordConfirmRef} required />
+            <Form.Group id="password-confirm" className="mt-2">
+              <Form.Control
+                type="password"
+                placeholder="password confirmation"
+                ref={passwordConfirmRef}
+                required
+              />
             </Form.Group>
             <Button disabled={loading} className="w-100 mt-2" type="submit">
               sign up
@@ -57,7 +71,9 @@ export default function Signup() {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        <p>Already have an account? Log In</p>
+        <p>
+          Already have an account? <Link to="/login">Log In</Link>
+        </p>
       </div>
     </>
   );

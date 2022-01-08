@@ -1,7 +1,7 @@
 import logo from '../images/logo-sochill.png';
 import React from 'react';
 import LoginForm from './LoginForm';
-import SignupForm from './SignupForm';
+import Signup from './Signup';
 
 export default function LandingPage() {
   return (
@@ -12,7 +12,7 @@ export default function LandingPage() {
           <img src={logo} alt="logo" />
         </div>
         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-col">
-          <SignupForm />
+          <Signup />
         </div>
       </div>
     </div>

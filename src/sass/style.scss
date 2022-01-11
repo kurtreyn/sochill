@@ -70,5 +70,17 @@ body {
         background-color: #4f709c;
       }
     }
+
+    img {
+      max-width: 8rem;
+      padding: 0.5rem;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
+}
+
+.landing-icon-container {
+  display: flex;
 }

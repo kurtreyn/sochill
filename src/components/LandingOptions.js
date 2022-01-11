@@ -1,21 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import loginIcon from '../images/icon-login.png';
 import signUpIcon from '../images/icon-signup.png';
-import Signup from './Signup';
-import Login from './Login';
 
-export default function LandingPage(props) {
-  const selectOption = (e) => {
-    let selected = e.target.getAttribute('data-option');
-    console.log(selected);
-    if (selected === 'login') {
-      console.log('props login');
-      props.changeSelection(<Login />);
-    }
-    if (props.selected === 'signup') {
-    }
-  };
+export default function LandingOptions() {
+  const [selection, changeSelection] = useState(<LandingOptions />);
   return (
     <div className="landing-icon-container">
       <div>
@@ -26,7 +14,7 @@ export default function LandingPage(props) {
               src={loginIcon}
               alt="login"
               data-option="login"
-              onClick={selectOption}
+              onClick={changeSelection}
             />
           </li>
           <li> login</li>
@@ -40,7 +28,7 @@ export default function LandingPage(props) {
               src={signUpIcon}
               alt="sign up"
               data-option="signup"
-              onClick={selectOption}
+              onClick={changeSelection}
             />
           </li>
           <li>sign up</li>

@@ -1,7 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-import Navigation from './Navigation';
-import LandingPage from './LandingPage';
 import Dashboard from './Dashboard';
 import Login from './Login';
 import Signup from './Signup';
@@ -10,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
 import UpdateProfile from './UpdateProfile';
+import LandingPage from './LandingPage';
 
 export default function Main() {
   return (
@@ -27,8 +26,6 @@ export default function Main() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
-        {/* <Login /> */}
-        {/* <LandingPage /> */}
       </AuthProvider>
     </div>
   );

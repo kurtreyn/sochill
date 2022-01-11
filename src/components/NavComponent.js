@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
+import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 
-import { Link } from 'react-router-dom';
 import navLogo from '../images/logo-sochill.png';
 
-export default function NavComponent(props) {
+export default function NavComponent() {
+  const [error, setError] = useState('');
+  const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
+
+  async function handleLogout() {
+    setError('');
+
+    try {
+      await logout();
+      navigate('/login');
+    } catch {
+      setError('failed to log out');
+    }
+  }
   return (
     <>
       <Navbar className="custom-nav">
@@ -16,7 +31,7 @@ export default function NavComponent(props) {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">home</Nav.Link>
-              <Button variant="link" onClick={props.handleLogout}>
+              <Button variant="link" onClick={handleLogout}>
                 log out
               </Button>
             </Nav>

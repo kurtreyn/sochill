@@ -24,10 +24,29 @@ export default function Signup() {
       setError('');
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      console.log(currentUser.email);
       navigate('/dashboard');
-    } catch {
-      setError('failed to create an account');
+    } catch (err) {
+      console.log(err.code);
+      switch (err.code) {
+        case 'auth/email-already-in-use':
+          setError('email already in use. try logging in');
+          break;
+        case 'auth/invalid-email':
+          setError('email address is invalid');
+          break;
+        case 'auth/operation-not-allowed':
+          setError('error during signup');
+          break;
+        case 'auth/weak-password':
+          setError(
+            'Password is not strong enough. Add additional characters including special characters and numbers.'
+          );
+          break;
+        default:
+          console.log(err.message);
+          setError('failed to create an account');
+          break;
+      }
     }
     setLoading(false);
   }

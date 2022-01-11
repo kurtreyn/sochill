@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Card, Button, Alert, Container } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
+import Navigation from './Navigation';
+import NavComponent from './NavComponent';
 
 export default function Dashboard() {
   const [error, setError] = useState('');
@@ -20,7 +22,8 @@ export default function Dashboard() {
   }
   return (
     <>
-      <Container>
+      <NavComponent />
+      {/* <Container>
         <Card>
           <Card.Body>
             <h2 className="text-center mb-4">Profile</h2>
@@ -36,7 +39,7 @@ export default function Dashboard() {
             log out
           </Button>
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 }

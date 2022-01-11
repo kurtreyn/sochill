@@ -98,5 +98,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.landing-icon-container ul {
+  list-style: none;
+}
+
+.hide-item {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

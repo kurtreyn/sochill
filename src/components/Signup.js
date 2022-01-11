@@ -3,8 +3,6 @@ import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 
-// https://youtu.be/PKwu15ldZ7k?t=2684
-
 export default function Signup() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -72,7 +70,7 @@ export default function Signup() {
       </Card>
       <div className="w-100 text-center mt-2">
         <p>
-          Already have an account? <Link to="/login">Log In</Link>
+          Already have an account? <Link to="/login">log in</Link>
         </p>
       </div>
     </>

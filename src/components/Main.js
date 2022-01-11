@@ -16,7 +16,8 @@ export default function Main() {
     <div>
       <AuthProvider>
         <Routes>
-          <Route exact path="/" element={<PrivateRoute />}>
+          <Route exact path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<PrivateRoute />}>
             <Route exact path="" element={<Dashboard />} />
           </Route>
           <Route path="/update-profile" element={<PrivateRoute />}>

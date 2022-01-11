@@ -1,6 +1,5 @@
 import logo from '../images/logo-sochill.png';
 import React from 'react';
-import LoginForm from './LoginForm';
 import Signup from './Signup';
 
 export default function LandingPage() {

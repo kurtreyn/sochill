@@ -90,6 +90,29 @@ body {
   }
 }
 
+.user-row {
+  display: flex;
+
+  .side-dock-col {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0;
+    background-color: $colorThree;
+
+    img {
+      max-width: 40%;
+      padding: 2%;
+    }
+  }
+
+  .news-feed {
+    margin-left: 18%;
+  }
+}
+
 .hide-item {
   display: none;
 }

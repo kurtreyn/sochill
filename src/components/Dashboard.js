@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Card, Button, Alert, Container } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-import Navigation from './Navigation';
+import SideDock from './SideDock';
 import NavComponent from './NavComponent';
+import UserForm from './UserForm';
+import FeedComponent from './FeedComponent';
 
 export default function Dashboard() {
   const [error, setError] = useState('');
@@ -23,6 +24,16 @@ export default function Dashboard() {
   return (
     <>
       <NavComponent />
+
+      <div className="container-fluid">
+        <div className="row user-row">
+          <SideDock />
+          <UserForm />
+          <FeedComponent />
+        </div>
+        <div className="row news-feed"></div>
+      </div>
+
       {/* <Container>
         <Card>
           <Card.Body>

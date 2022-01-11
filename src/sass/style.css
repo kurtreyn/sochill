@@ -108,6 +108,35 @@ body {
   list-style: none;
 }
 
+.user-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-row .side-dock-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 0;
+  padding: 0;
+  background-color: #3edbf0;
+}
+
+.user-row .side-dock-col img {
+  max-width: 40%;
+  padding: 2%;
+}
+
+.user-row .news-feed {
+  margin-left: 18%;
+}
+
 .hide-item {
   display: none;
 }

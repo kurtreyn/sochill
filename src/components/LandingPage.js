@@ -1,7 +1,9 @@
 import logo from '../images/logo-sochill.png';
-import React from 'react';
-import LoginForm from './LoginForm';
+import React, { useState } from 'react';
 import Signup from './Signup';
+import Login from './Login';
+import { Link } from 'react-router-dom';
+import LandingOptions from './LandingOptions';
 
 export default function LandingPage() {
   return (
@@ -12,7 +14,7 @@ export default function LandingPage() {
           <img src={logo} alt="logo" />
         </div>
         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-col">
-          <Signup />
+          <Login />
         </div>
       </div>
     </div>

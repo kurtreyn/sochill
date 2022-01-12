@@ -19,7 +19,7 @@ export default function Login() {
       setError('');
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
-      navigate('/');
+      navigate('/dashboard');
     } catch {
       setError('failed to log in');
     }
@@ -50,18 +50,25 @@ export default function Login() {
               />
             </Form.Group>
 
-            <Button disabled={loading} className="w-100 mt-2" type="submit">
+            <Button
+              disabled={loading}
+              className="w-100 mt-2 btn-log-in"
+              type="submit"
+            >
               log in
             </Button>
+            <Link to="/signup">
+              <Button className="w-100 mt-2 btn-sign-up">sign up</Button>
+            </Link>
           </Form>
         </Card.Body>
+        <div className="w-100 text-center mt-2">
+          <Link to="/forgot-password">forgot password?</Link>
+          <p>
+            Need an account? <Link to="/signup">Sign Up</Link>
+          </p>
+        </div>
       </Card>
-      <div className="w-100 text-center mt-2">
-        <Link to="/forgot-password">forgot password?</Link>
-        <p>
-          Need an account? <Link to="/signup">Sign Up</Link>
-        </p>
-      </div>
     </>
   );
 }

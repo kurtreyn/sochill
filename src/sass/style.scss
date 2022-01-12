@@ -20,6 +20,7 @@ body {
         text-decoration: none;
         &:hover {
           color: #0f07f8;
+          text-decoration: none;
         }
       }
     }
@@ -64,11 +65,67 @@ body {
       font-family: 'Roboto', sans-serif;
     }
 
-    Button {
+    .btn-log-in {
+      background-color: $colorOne;
+      &:hover {
+        background-color: #1c15d6;
+      }
+    }
+
+    .btn-sign-up {
       background-color: $colorTwo;
       &:hover {
-        background-color: #4f709c;
+        background-color: #5f9ff1;
+      }
+    }
+
+    img {
+      max-width: 8rem;
+      padding: 0.5rem;
+      &:hover {
+        transform: scale(1.05);
       }
     }
   }
+}
+
+.landing-icon-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  ul {
+    list-style: none;
+  }
+}
+
+.custom-form {
+  display: flex;
+  justify-content: center;
+}
+
+.user-row {
+  display: flex;
+
+  .side-dock-col {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0;
+    background-color: $colorThree;
+
+    img {
+      max-width: 40%;
+      padding: 2%;
+    }
+  }
+
+  .news-feed {
+    margin-left: 18%;
+  }
+}
+
+.hide-item {
+  display: none;
 }

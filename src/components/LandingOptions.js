@@ -3,7 +3,7 @@ import loginIcon from '../images/icon-login.png';
 import signUpIcon from '../images/icon-signup.png';
 
 export default function LandingOptions() {
-  const [selection, changeSelection] = useState(<LandingOptions />);
+  // const [selection, changeSelection] = useState(<LandingOptions />);
   return (
     <div className="landing-icon-container">
       <div>
@@ -14,7 +14,7 @@ export default function LandingOptions() {
               src={loginIcon}
               alt="login"
               data-option="login"
-              onClick={changeSelection}
+              // onClick={changeSelection}
             />
           </li>
           <li> login</li>
@@ -28,7 +28,7 @@ export default function LandingOptions() {
               src={signUpIcon}
               alt="sign up"
               data-option="signup"
-              onClick={changeSelection}
+              // onClick={changeSelection}
             />
           </li>
           <li>sign up</li>

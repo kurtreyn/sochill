@@ -15,7 +15,7 @@ export default function NavComponent() {
 
     try {
       await logout();
-      navigate('/login');
+      navigate('/');
     } catch {
       setError('failed to log out');
     }
@@ -31,9 +31,9 @@ export default function NavComponent() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">home</Nav.Link>
-              <Button variant="link" onClick={handleLogout}>
+              <Nav.Link href="" onClick={handleLogout}>
                 log out
-              </Button>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

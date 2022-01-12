@@ -19,6 +19,7 @@ body {
 
 .custom-nav .navbar-nav .nav-link a:hover {
   color: #0f07f8;
+  text-decoration: none;
 }
 
 .custom-nav .nav-logo {
@@ -76,12 +77,20 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.landing-row .form-col Button {
+.landing-row .form-col .btn-log-in {
+  background-color: #04009a;
+}
+
+.landing-row .form-col .btn-log-in:hover {
+  background-color: #1c15d6;
+}
+
+.landing-row .form-col .btn-sign-up {
   background-color: #77acf1;
 }
 
-.landing-row .form-col Button:hover {
-  background-color: #4f709c;
+.landing-row .form-col .btn-sign-up:hover {
+  background-color: #5f9ff1;
 }
 
 .landing-row .form-col img {
@@ -106,6 +115,15 @@ body {
 
 .landing-icon-container ul {
   list-style: none;
+}
+
+.custom-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .user-row {

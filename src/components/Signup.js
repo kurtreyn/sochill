@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Form, Button, Card, Alert, Container } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
+import LandingPage from './LandingPage';
 
 export default function Signup() {
   const emailRef = useRef();
@@ -53,47 +54,57 @@ export default function Signup() {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Sign Up</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          {message && <Alert variant="success">{message}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email" placeholder="email">
-              <Form.Control
-                type="email"
-                placeholder="email"
-                ref={emailRef}
-                required
-              />
-            </Form.Group>
-            <Form.Group id="password" className="mt-2">
-              <Form.Control
-                type="password"
-                placeholder="password"
-                ref={passwordRef}
-                required
-              />
-            </Form.Group>
+      <div className="container">
+        <div className="row custom-form">
+          <div className="col col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-3">
+            <Card>
+              <Card.Body>
+                <h2 className="text-center mb-4">Sign Up</h2>
+                {error && <Alert variant="danger">{error}</Alert>}
+                {message && <Alert variant="success">{message}</Alert>}
+                <Form onSubmit={handleSubmit}>
+                  <Form.Group id="email" placeholder="email">
+                    <Form.Control
+                      type="email"
+                      placeholder="email"
+                      ref={emailRef}
+                      required
+                    />
+                  </Form.Group>
+                  <Form.Group id="password" className="mt-2">
+                    <Form.Control
+                      type="password"
+                      placeholder="password"
+                      ref={passwordRef}
+                      required
+                    />
+                  </Form.Group>
 
-            <Form.Group id="password-confirm" className="mt-2">
-              <Form.Control
-                type="password"
-                placeholder="password confirmation"
-                ref={passwordConfirmRef}
-                required
-              />
-            </Form.Group>
-            <Button disabled={loading} className="w-100 mt-2" type="submit">
-              sign up
-            </Button>
-          </Form>
-        </Card.Body>
-      </Card>
-      <div className="w-100 text-center mt-2">
-        <p>
-          Already have an account? <Link to="/login">log in</Link>
-        </p>
+                  <Form.Group id="password-confirm" className="mt-2">
+                    <Form.Control
+                      type="password"
+                      placeholder="password confirmation"
+                      ref={passwordConfirmRef}
+                      required
+                    />
+                  </Form.Group>
+                  <Button
+                    disabled={loading}
+                    className="w-100 mt-2"
+                    type="submit"
+                  >
+                    sign up
+                  </Button>
+                </Form>
+              </Card.Body>
+              <div className="w-100 text-center mt-2">
+                <p>
+                  Already have an account? <Link to="/">log in</Link>
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
       </div>
     </>
   );

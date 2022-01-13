@@ -7,6 +7,22 @@ import LandingOptions from './LandingOptions';
 import SelectLanding from './SelectLanding';
 
 export default function LandingPage() {
+  const [initLand, setLand] = useState(<LandingOptions />);
+  // const button = document.querySelectorAll('[data-option]');
+
+  function changeLand(e) {
+    const selection = e.target.getAttribute('data-option');
+    if (selection === 'login') {
+      console.log(selection);
+      // setLand(<Login />);
+    } else if (selection === 'signup') {
+      console.log(selection);
+      // setLand(<Signup />);
+    } else {
+      // setLand(<LandingOptions />);
+    }
+  }
+
   return (
     <div className="container-fluid">
       <div className="row custom-row landing-row">
@@ -15,7 +31,7 @@ export default function LandingPage() {
           <img src={logo} alt="logo" />
         </div>
         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-col">
-          <SelectLanding />
+          {initLand}
         </div>
       </div>
     </div>

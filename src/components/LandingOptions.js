@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import Login from './Login';
+import Signup from './Signup';
 import loginIcon from '../images/icon-login.png';
 import signUpIcon from '../images/icon-signup.png';
 
-export default function LandingOptions() {
-  // const [selection, changeSelection] = useState(<LandingOptions />);
+export default function LandingOptions(props) {
   return (
     <div className="landing-icon-container">
       <div>
@@ -14,7 +15,7 @@ export default function LandingOptions() {
               src={loginIcon}
               alt="login"
               data-option="login"
-              // onClick={changeSelection}
+              onClick={props.changeLand}
             />
           </li>
           <li> login</li>
@@ -28,7 +29,7 @@ export default function LandingOptions() {
               src={signUpIcon}
               alt="sign up"
               data-option="signup"
-              // onClick={changeSelection}
+              onClick={props.changeLand}
             />
           </li>
           <li>sign up</li>

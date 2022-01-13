@@ -27,7 +27,6 @@ export default function Dashboard() {
 
       <div className="container-fluid">
         <div className="row user-row">
-          <SideDock />
           <UserForm />
           <FeedComponent />
         </div>

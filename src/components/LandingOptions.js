@@ -4,7 +4,7 @@ import Signup from './Signup';
 import loginIcon from '../images/icon-login.png';
 import signUpIcon from '../images/icon-signup.png';
 
-export default function LandingOptions(props) {
+export default function LandingOptions() {
   return (
     <div className="landing-icon-container">
       <div>
@@ -15,7 +15,7 @@ export default function LandingOptions(props) {
               src={loginIcon}
               alt="login"
               data-option="login"
-              onClick={props.changeLand}
+              // onClick={changeLand}
             />
           </li>
           <li> login</li>
@@ -29,7 +29,7 @@ export default function LandingOptions(props) {
               src={signUpIcon}
               alt="sign up"
               data-option="signup"
-              onClick={props.changeLand}
+              // onClick={changeLand}
             />
           </li>
           <li>sign up</li>

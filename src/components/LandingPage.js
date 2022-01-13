@@ -8,19 +8,23 @@ import SelectLanding from './SelectLanding';
 
 export default function LandingPage() {
   const [initLand, setLand] = useState(<LandingOptions />);
-  // const button = document.querySelectorAll('[data-option]');
+  const buttons = document.querySelectorAll('[data-option]');
 
   function changeLand(e) {
     const selection = e.target.getAttribute('data-option');
     if (selection === 'login') {
       console.log(selection);
-      // setLand(<Login />);
+      setLand(<Login />);
     } else if (selection === 'signup') {
       console.log(selection);
       // setLand(<Signup />);
     } else {
       // setLand(<LandingOptions />);
     }
+  }
+
+  for (const btn of buttons) {
+    btn.addEventListener('click', changeLand);
   }
 
   return (

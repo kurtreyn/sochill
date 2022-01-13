@@ -56,7 +56,7 @@ export default function Signup() {
     <>
       <div className="container">
         <div className="row custom-form">
-          <div className="col col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-3">
+          <div className="col col-sm-12 col-md-10 col-lg-8 col-xl-8 mt-3">
             <Card>
               <Card.Body>
                 <h2 className="text-center mb-4">Sign Up</h2>

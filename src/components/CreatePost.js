@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Button, Card } from 'react-bootstrap';
 import blankProfilePic from '../images/blank-profile-pic.png';
 
-export default function UserForm() {
-  const [postText, setPostText] = useState('');
-
-  function updatePostText(e) {
-    setPostText(e.target.value.trim());
-    console.log(`postText is: ${postText}`);
-  }
-
+export default function CreatePost() {
   return (
     <>
       <div className="col col-sm-12 col-md-6 col-lg-6 col-xl-6 user-form-col">
@@ -21,11 +14,7 @@ export default function UserForm() {
           <Card.Body>
             <Form onSubmit="">
               <Form.Group id="post">
-                <Form.Control
-                  type="post"
-                  placeholder="make a post"
-                  onChange={updatePostText}
-                />
+                <Form.Control type="post" placeholder="make a post" />
               </Form.Group>
 
               <Button className="mt-2" type="submit">

@@ -28,7 +28,6 @@ export default function Dashboard() {
       <div className="container-fluid">
         <div className="row user-row">
           <UserForm />
-          <FeedComponent />
         </div>
         <div className="row news-feed"></div>
       </div>

@@ -30,7 +30,8 @@ export default function NavComponent() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">home</Nav.Link>
+              <Nav.Link href="/">home</Nav.Link>
+              <Nav.Link href="/createpost">create post</Nav.Link>
               <Nav.Link href="" onClick={handleLogout}>
                 log out
               </Nav.Link>
